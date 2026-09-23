@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f45b92">
+  <meta name="description" content="Manual de identidad visual interactivo de Dulce Arte, Insumos y Más.">
+  <title>Dulce Arte — Manual de Identidad Visual</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+  <header class="site-header" id="top">
+    <a class="brand-link" href="#inicio" aria-label="Dulce Arte, volver al inicio">
+      <img src="assets/logo-horizontal.png" alt="Dulce Arte, Insumos y Más">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#esencia">Esencia</a>
+      <a href="#logotipo">Logotipo</a>
+      <a href="#color">Color</a>
+      <a href="#tipografia">Tipografía</a>
+      <a href="#usos">Usos</a>
+      <a href="#aplicaciones">Aplicaciones</a>
+      <a href="#descargas">Descargas</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-wash" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-mark">
+          <img class="hero-logo" src="assets/logo-vertical.png" alt="Dulce Arte, Insumos y Más">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Manual de identidad visual · 2026</p>
+          <h1>Dulce, reconocible<br>y coherente.</h1>
+          <p class="hero-intro">Una guía para mantener cada expresión de Dulce Arte con la misma personalidad.</p>
+          <a class="scroll-cue" href="#esencia">Explorar la identidad <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-section" id="esencia">
+      <div class="section-number">01</div>
+      <div class="intro-copy reveal">
+        <p class="eyebrow">Presentación</p>
+        <h1>El arte también<br>se puede saborear.</h1>
+        <p>Este manual reúne los criterios que definen la identidad visual de <strong>Dulce Arte — Insumos y Más</strong>. Su propósito es asegurar una comunicación gráfica sólida, coherente y uniforme en cada punto de contacto.</p>
+      </div>
+      <div class="principles reveal">
+        <article><span>01</span><h3>Dulce</h3><p>Una expresión cercana, alegre y llena de color.</p></article>
+        <article><span>02</span><h3>Creativa</h3><p>La repostería entendida como una forma de arte.</p></article>
+        <article><span>03</span><h3>Consistente</h3><p>Una presencia reconocible en todos los formatos.</p></article>
+      </div>
+      <div class="melt-divider" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 160" preserveAspectRatio="none"><path fill="currentColor" d="M0 0H2048V67C2022 33 1990 40 1960 48C1909 63 1865 104 1816 105C1766 107 1744 73 1723 73C1700 73 1697 91 1703 112C1711 141 1677 142 1680 119C1683 98 1690 67 1651 64C1610 64 1604 28 1574 36C1534 44 1502 105 1435 113C1367 123 1334 81 1297 62C1252 38 1233 74 1195 85C1139 101 1116 57 1074 47C1028 34 989 58 978 84C970 103 983 126 977 138C973 150 956 147 956 133C957 113 965 92 949 81C927 62 902 88 872 94C814 111 778 80 747 59C706 26 681 30 645 58C605 89 574 114 526 115C453 119 407 80 363 55C302 19 270 16 234 21C192 23 137 43 110 55C78 69 90 98 92 120C96 157 60 158 62 128C63 111 73 75 57 58C44 41 22 52 0 70Z"/></svg></div>
+    </section>
+
+    <section class="section logo-section" id="logotipo">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">02 · Sistema de marca</p><h2>Un logotipo,<br>distintas escalas.</h2></div>
+        <p>Selecciona una versión, cambia el fondo y prueba su tamaño. La proporción y la composición siempre deben permanecer intactas.</p>
+      </div>
+
+      <div class="logo-lab reveal">
+        <div class="logo-controls" aria-label="Controles del logotipo">
+          <div class="segmented" role="group" aria-label="Versión del logotipo">
+            <button class="active" data-logo="vertical">Vertical</button>
+            <button data-logo="horizontal">Horizontal</button>
+            <button data-logo="isotipo">Isotipo</button>
+          </div>
+          <div class="control-row">
+            <label for="logoSize">Escala <output id="sizeOutput">72%</output></label>
+            <input id="logoSize" type="range" min="36" max="100" value="72">
+          </div>
+          <div class="control-row inline-row">
+            <span>Fondo</span>
+            <div class="background-choices" role="group" aria-label="Color de fondo">
+              <button class="active" data-bg="white" aria-label="Fondo blanco"></button>
+              <button data-bg="pink" aria-label="Fondo rosa"></button>
+              <button data-bg="brown" aria-label="Fondo marrón"></button>
+              <button data-bg="black" aria-label="Fondo negro"></button>
+            </div>
+          </div>
+        </div>
+        <div class="logo-stage" id="logoStage">
+          <div class="logo-preview-frame">
+            <img id="logoPreview" class="logo-vertical" src="assets/logo-vertical.svg" alt="Vista previa de la versión vertical del logotipo">
+          </div>
+          <span class="stage-label" id="stageLabel">Versión vertical · tamaño 72%</span>
+        </div>
+      </div>
+      <div class="logo-note reveal"><img src="assets/isotipo.svg" alt="Isotipo vectorial de Dulce Arte"><p>El isotipo se utiliza como firma compacta cuando el espacio es reducido o la marca ya está contextualizada.</p></div>
+    </section>
+
+    <section class="section color-section" id="color">
+      <div class="section-heading light reveal">
+        <div><p class="eyebrow">03 · Paleta de colores</p><h2>Una mezcla<br>con personalidad.</h2></div>
+        <p>El rosa lidera la identidad; el rojo aporta energía y el marrón da profundidad. El blanco y el negro amplían la paleta como tonos de apoyo.</p>
+      </div>
+      <div class="swatches">
+        <button class="swatch swatch-primary reveal" data-color="#F45B92">
+          <span class="swatch-role">Primario</span><span class="swatch-value">#F45B92</span><span class="copy-hint">Copiar color</span>
+        </button>
+        <button class="swatch swatch-secondary reveal" data-color="#DF4638">
+          <span class="swatch-role">Secundario</span><span class="swatch-value">#DF4638</span><span class="copy-hint">Copiar color</span>
+        </button>
+        <button class="swatch swatch-tertiary reveal" data-color="#6C3232">
+          <span class="swatch-role">Terciario</span><span class="swatch-value">#6C3232</span><span class="copy-hint">Copiar color</span>
+        </button>
+        <button class="swatch swatch-black reveal" data-color="#000000">
+          <span class="swatch-role">Neutro oscuro</span><span class="swatch-value">#000000</span><span class="copy-hint">Copiar color</span>
+        </button>
+        <button class="swatch swatch-white reveal" data-color="#FFFFFF">
+          <span class="swatch-role">Neutro claro</span><span class="swatch-value">#FFFFFF</span><span class="copy-hint">Copiar color</span>
+        </button>
+      </div>
+      <div class="color-rule reveal"><span>Proporción sugerida</span><div><i style="--w:60%;--c:#f45b92"></i><i style="--w:25%;--c:#df4638"></i><i style="--w:15%;--c:#6c3232"></i></div><small>60 / 25 / 15</small></div>
+    </section>
+
+    <section class="section type-section" id="tipografia">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">04 · Tipografía</p><h2>Voces que se<br>complementan.</h2></div>
+        <p>Tres estilos tipográficos construyen una jerarquía expresiva: carácter, claridad y presencia.</p>
+      </div>
+      <div class="type-tester reveal">
+        <label for="typeInput">Escribe para probar la tipografía</label>
+        <input id="typeInput" value="Cada creación es una obra" maxlength="70" aria-describedby="typeHelp">
+        <small id="typeHelp">El texto se actualiza en las tres muestras.</small>
+      </div>
+      <div class="type-specimens">
+        <article class="type-card type-primary reveal"><div><span>Primaria</span><strong>Pupcat</strong></div><p data-type-sample>Cada creación es una obra</p><small>Uso: logotipo y expresiones de marca</small></article>
+        <article class="type-card type-secondary reveal"><div><span>Secundaria</span><strong>Aller</strong></div><p data-type-sample>Cada creación es una obra</p><small>Uso: textos, información y comunicación</small></article>
+        <article class="type-card type-tertiary reveal"><div><span>Terciaria</span><strong>Bebas Neue</strong></div><p data-type-sample>Cada creación es una obra</p><small>Uso: titulares y mensajes destacados</small></article>
+      </div>
+    </section>
+
+    <section class="section usage-section" id="usos">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">05 · Usos</p><h2>Proteger la<br>identidad.</h2></div>
+        <p>La marca debe conservar su forma, colores y elementos. Estas reglas garantizan reconocimiento y legibilidad.</p>
+      </div>
+      <div class="usage-grid">
+        <article class="usage-card correct reveal"><div class="usage-mark">✓</div><div class="mini-logo"><img src="assets/logo-vertical.png" alt="Logotipo usado correctamente"></div><h3>Uso correcto</h3><p>Respeta la proporción, el espacio libre y la paleta oficial.</p></article>
+        <article class="usage-card wrong reveal"><div class="usage-mark">×</div><div class="mini-logo distorted"><img src="assets/logo-vertical.png" alt="Ejemplo de logotipo deformado"></div><h3>No deformar</h3><p>No estires ni comprimas el logotipo.</p></article>
+        <article class="usage-card wrong reveal"><div class="usage-mark">×</div><div class="mini-logo rotated"><img src="assets/logo-vertical.png" alt="Ejemplo de logotipo rotado"></div><h3>No rotar</h3><p>Mantén siempre la orientación original.</p></article>
+        <article class="usage-card wrong reveal"><div class="usage-mark">×</div><div class="mini-logo recolored"><img src="assets/logo-vertical.png" alt="Ejemplo de logotipo con color incorrecto"></div><h3>No recolorear</h3><p>Evita colores ajenos a la paleta oficial.</p></article>
+      </div>
+    </section>
+
+    <section class="section applications-section" id="aplicaciones">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">06 · Aplicaciones</p><h2>La marca<br>en acción.</h2></div>
+        <p>Una identidad flexible, pensada para acompañar cada experiencia: desde una publicación hasta el empaque final.</p>
+      </div>
+      <div class="filter-bar reveal" role="group" aria-label="Filtrar aplicaciones">
+        <button class="active" data-filter="all">Todas</button>
+        <button data-filter="digital">Digital</button>
+        <button data-filter="paper">Papelería</button>
+        <button data-filter="packaging">Empaques</button>
+        <button data-filter="space">Espacios</button>
+      </div>
+      <div class="gallery" id="gallery">
+        <button class="gallery-item reveal" data-category="digital" data-title="Portada digital" data-image="assets/cover-digital.webp"><img src="assets/cover-digital.webp" alt="Portada digital de Dulce Arte" loading="lazy"><span>Portada</span></button>
+        <button class="gallery-item wide reveal" data-category="digital" data-title="Contenido para redes sociales" data-image="assets/social-media.webp"><img src="assets/social-media.webp" alt="Aplicaciones de Dulce Arte para redes sociales" loading="lazy"><span>Redes sociales</span></button>
+        <button class="gallery-item reveal" data-category="digital" data-title="Stickers para WhatsApp" data-image="assets/stickers.webp"><img src="assets/stickers.webp" alt="Stickers de Dulce Arte para WhatsApp" loading="lazy"><span>Stickers</span></button>
+        <button class="gallery-item reveal" data-category="paper" data-title="Tarjetas de presentación" data-image="assets/cards.jpg"><img src="assets/cards.jpg" alt="Tarjetas de presentación de Dulce Arte" loading="lazy"><span>Tarjetas</span></button>
+        <button class="gallery-item reveal" data-category="paper" data-title="Mundo gráfico en papelería" data-image="assets/stationery.webp"><img src="assets/stationery.webp" alt="Papelería corporativa de Dulce Arte" loading="lazy"><span>Papelería</span></button>
+        <button class="gallery-item reveal" data-category="packaging" data-title="Sello de seguridad" data-image="assets/seal.jpg"><img src="assets/seal.jpg" alt="Sello de seguridad de Dulce Arte" loading="lazy"><span>Sello de seguridad</span></button>
+        <button class="gallery-item reveal" data-category="packaging" data-title="Sticker para botellas" data-image="assets/bottles.webp"><img src="assets/bottles.webp" alt="Botellas con stickers de Dulce Arte" loading="lazy"><span>Botellas</span></button>
+        <button class="gallery-item reveal" data-category="packaging" data-title="Diseño de caja · versión 1" data-image="assets/box-v1.webp"><img src="assets/box-v1.webp" alt="Caja blanca de Dulce Arte" loading="lazy"><span>Caja V1</span></button>
+        <button class="gallery-item reveal" data-category="packaging" data-title="Diseño de caja · versión 2" data-image="assets/box-v2.webp"><img src="assets/box-v2.webp" alt="Caja rosa floral de Dulce Arte" loading="lazy"><span>Caja V2</span></button>
+        <button class="gallery-item reveal" data-category="space" data-title="Camisetas y camisas polo" data-image="assets/uniforms.webp"><img src="assets/uniforms.webp" alt="Uniformes de Dulce Arte" loading="lazy"><span>Uniformes</span></button>
+        <button class="gallery-item wide reveal" data-category="space" data-title="Rotulación del local" data-image="assets/signage.webp"><img src="assets/signage.webp" alt="Rotulación del local de Dulce Arte" loading="lazy"><span>Rotulación</span></button>
+      </div>
+    </section>
+
+    <section class="closing" id="descargas">
+      <div class="drip top" aria-hidden="true"></div>
+      <img src="assets/isotipo.svg" alt="Isotipo vectorial de Dulce Arte">
+      <a class="download-material" href="https://drive.google.com/drive/folders/12oT2rBrcO4DbO4R6nfe7pyQ29DbeJzGt?usp=sharing" target="_blank" rel="noopener noreferrer">Descargar material <span aria-hidden="true">↗</span></a>
+      <a class="back-to-top" href="#inicio">Volver al inicio ↑</a>
+      <small>Manual de identidad visual · Dulce Arte · 2026</small>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista ampliada">×</button>
+    <img id="lightboxImage" src="" alt="">
+    <p id="lightboxTitle"></p>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite">Color copiado</div>
+</body>
+</html>
+
+
